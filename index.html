@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>
+      Demonstration of Cloudinary Product Gallery's Accessibility Features
+    </h1>
+    <script
+      type="text/javascript"
+      src="https://product-gallery.cloudinary.com/all.js"
+    ></script>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <div class="flex-container">
+      <div class="training" id="training"></div>
+    </div>
+
+    <script>
+      cloudinary
+        .galleryWidget({
+          container: "#training",
+          cloudName: "demo",
+          mediaAssets: [
+            {
+              tag: "graduation-dress",
+            },
+            {
+              tag: "graduation-dress",
+              mediaType: "video",
+            },
+          ],
+          zoom: true, // for demonstration purposes, true is the default value
+          focus: true, // for moving the focus directly to the Product Gallery when the page renders
+          displayProps: {
+            mode: "classic",
+            spacing: 15,
+          },
+          aspectRatio: "3:4",
+          transformation: {
+            crop: "fill",
+          },
+          bgColor: "transparent",
+          carouselLocation: "left",
+          carouselOffset: 10,
+          navigation: "always",
+          thumbnailProps: {
+            mediaSymbolSize: 42,
+            spacing: 20,
+            width: 90,
+            height: 90,
+          },
+          navigationButtonProps: {
+            // emphasizes zoom and navigation buttons with pronounced colors
+            shape: "round",
+            iconColor: "#ffffff",
+            color: "#000",
+            size: 52,
+            navigationPosition: "offset",
+            navigationOffset: 12,
+          },
+          zoomProps: {
+            type: "popup",
+            steps: 3,
+            stepLimit: true,
+            level: 1.3, // each step zooms in another 130%
+          },
+          accessibilityProps: {
+            mediaAltSource: "contextual",
+            mediaAltId: "alt_id",
+          },
+          videoProps: {
+            controls: "play",
+          }, // displays only the play/pause video controls
+        })
+        .render();
+    </script>
+  </body>
+</html>

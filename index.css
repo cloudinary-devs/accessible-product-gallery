@@ -1,0 +1,9 @@
+#training {
+  width: 30rem;
+}
+.flex-container {
+  width: 40rem;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  max-width: 90%;
+}
