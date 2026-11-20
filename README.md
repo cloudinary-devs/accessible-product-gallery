@@ -2,6 +2,8 @@
 
 A demonstration of [Cloudinary Product Gallery's](https://cloudinary.com/documentation/product_gallery) accessibility features.
 
+This sample uses Product Gallery 2.1.0-beta.0, the accessibility release. It's a beta, so the script URL is pinned to that exact version.
+
 ## How to run
 
 This is a plain static project with no build step required.
